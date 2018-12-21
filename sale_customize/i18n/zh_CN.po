@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 00:12+0800\n"
+"PO-Revision-Date: 2018-12-19 00:14+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+
+#. module: sale.customize
+#: model:ir.model.fields,field_description:sale.field_sale_order__sale_type_id
+#: model_terms:ir.ui.view,arch_db:sale.view_sale_order_search
+msgid "Sale Type"
+msgstr "销售类型"
+
+#. module: sale.customize
+#: selection:sale.order,sale_type_id:0
+#: model:ir.model.fields,field_description:sale.field_sale_order__default_order
+msgid "Default Order"
+msgstr "常规订单"
+
+#. module: sale.customize
+#: selection:sale.order,sale_type_id:1
+#: model:ir.model.fields,field_description:sale.field_sale_order__sample_order
+msgid "Sample Order"
+msgstr "样品订单"
+
+#. module: sale.customize
+#: selection:sale.order,sale_type_id:2
+#: model:ir.model.fields,field_description:sale.field_sale_order__exhibition_order
+msgid "Exhibition Order"
+msgstr "展览会订单"

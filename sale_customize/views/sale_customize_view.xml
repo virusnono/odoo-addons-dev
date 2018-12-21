@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_view_order_form_with_sale_type" model="ir.ui.view">
+        <field name="name">sale.order.form.with_carrier.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="sale_type_id" widget="radio"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="sale_order_view_form_customize" model="ir.ui.view">
+        <field name="name">sale.order.view.form.customize.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_management.sale_order_view_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="sale_order_view_tree_customize" model="ir.ui.view">
+        <field name="name">sale.order.tree.customize.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="expected_date" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="invoice_status" position="attributes">
+                <attribute name="groups">base.group_system</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
